@@ -1,0 +1,8 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/String/Random/NiceURL.pm
+t/00-load.t
+t/01-length.t
+t/02-regex.t
