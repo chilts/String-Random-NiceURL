@@ -2,6 +2,7 @@ Changes
 MANIFEST
 Makefile.PL
 README
+COPYING
 lib/String/Random/NiceURL.pm
 t/00-load.t
 t/01-length.t
