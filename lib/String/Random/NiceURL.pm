@@ -9,7 +9,7 @@ use Scalar::Util qw(looks_like_number);
 our @EXPORT_OK = qw(id);
 our $VERSION = '0.01';
 
-# the end chars are the first and last chars of the ID
+# the end chars will be the first and last chars of the ID
 # the modified base 64 chars are as follows: http://en.wikipedia.org/wiki/Base64#URL_applications
 my @end_chars = ( 'A'..'Z', 'a'..'z', '0'..'9' );
 my @modified_b64 = ( @end_chars, '-', '_' );
@@ -41,8 +41,7 @@ sub id {
 
 =head1 NAME
 
-String::Random::NiceURL - create random ID strings for URLs by only using the
-modified Base64 characters
+String::Random::NiceURL - random ID strings suitable for URLs.
 
 =head1 VERSION
 
@@ -57,10 +56,11 @@ Version 0.01
 =head1 DESCRIPTION
 
 This module allows you to create sparse and distributed IDs such as those used
-for YouTube videos. It uses a modified base 64 character set but also makes
-sure that the first and last chars of your ID are not the dash or underscore
-characters (this helps some programs detect the URLs correctly, for example
-when double-clicking to highlight the text).
+for YouTube videos. It uses the modified base 64 character set so that the IDs
+are suitable for use in URLs. It also makes sure that the first and last chars
+of your ID are not the dash or underscore characters (this helps some programs
+detect the URLs correctly, for example when double-clicking to highlight the
+text).
 
 Any length IDs (greater than two chars) can be created and could be used for
 blog posts, short URLs, images, videos and many other entities.
@@ -68,13 +68,8 @@ blog posts, short URLs, images, videos and many other entities.
 Other uses could be salts, session IDs, tokens when checking email addresses
 and nonces for XSRF tokens.
 
-As an example, let's generate an ID of length 6:
-
-    use String::Random::NiceURL qw(id);
-    my $id = id(6);
-    print "id=$id\n";
-
-This could print something like (for values of 2, 6, 11, 32):
+As an example, let's generate some IDs of varying lengths (just as we did in
+the SYNOPSIS): For example, for lengths of 2, 6, 11 and 32:
 
     id(2)  => 6p
     id(6)  => NIK_qV
@@ -91,14 +86,24 @@ as such:
 
     String::Random::NiceURL::id($length)
 
-It will return an example ID string of the specified number of characters.
+It returns an ID string of the specified number of characters.
 
 If the length if not provided, non-numeric or less than two, the function will
 croak with a user-error message.
 
-=head1 AUTHOR
+=head1 THE MODIFIED BASE64 CHARACTER SET
 
-Andrew Chilton, C<< <andy at chilts dot org> >>
+The normal Base64 char set includes all the characters, number and the two
+characters (+) and (/). Since URLs don't usually like the + or / (they have to
+be URL encoded), the modified set uses the dash (-) and underscore (_)
+instead. There is also no use or need for (=) at the end since we are not
+encoding a value, merely creating a random string.
+
+Therefore the complete set of 64 chars used is:
+
+    A-Za-z0-9-_
+
+See: L<http://en.wikipedia.org/wiki/Base64#URL%5Fapplications> for further info.
 
 =head1 BUGS
 
@@ -135,7 +140,9 @@ L<http://search.cpan.org/dist/String-Random-NiceURL>
 
 =back
 
-=head1 COPYRIGHT & LICENSE
+=head1 AUTHOR, COPYRIGHT & LICENSE
+
+Andrew Chilton, C<< <andy at chilts dot org> >>
 
 Copyright (c) 2010, Apps Attic Ltd, all rights reserved.
 

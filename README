@@ -1,4 +1,7 @@
-String-Random-NiceURL
+String-Random-NiceURL - v0.01
+=============================
+
+Random ID strings suitable for URLs.
 
 This module allows you to create sparse and distributed IDs such as those used
 for YouTube videos. It uses a modified base 64 character set but also makes
@@ -9,6 +12,7 @@ Any length IDs (greater than two chars) can be created and could be used for
 blog posts, short URLs, images or videos.
 
 EXAMPLE
+=======
 
     id(2)  => 6p
     id(6)  => NIK_qV
@@ -33,6 +37,7 @@ combinations at 11 chars, so not much less but much nicer due to the
 constrained first and last chars).
 
 INSTALLATION
+============
 
 To install this module, run the following commands:
 
@@ -42,6 +47,7 @@ To install this module, run the following commands:
 	make install
 
 SUPPORT AND DOCUMENTATION
+=========================
 
 After installing, you can find documentation for this module with the
 perldoc command.
@@ -62,14 +68,16 @@ You can also look for information at:
     Search CPAN
         http://search.cpan.org/dist/String-Random-NiceURL
 
+AUTHOR, COPYRIGHT AND LICENCE
+=============================
 
-COPYRIGHT AND LICENCE
+Written by Andrew Chilton, <andy at chilts dot org>
 
 Copyright (c) 2010, Apps Attic Ltd, all rights reserved.
 
 http://www.appsattic.com/
 
-This module is free software.  You can redistribute it and/or modify it under
+This module is free software. You can redistribute it and/or modify it under
 the terms of the Artistic License 2.0.
 
 This program is distributed in the hope that it will be useful, but without any
