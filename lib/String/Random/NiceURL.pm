@@ -7,7 +7,7 @@ use base 'Exporter';
 use Scalar::Util qw(looks_like_number);
 
 our @EXPORT_OK = qw(id);
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 # the end chars will be the first and last chars of the ID
 # the modified base 64 chars are as follows: http://en.wikipedia.org/wiki/Base64#URL_applications
@@ -45,7 +45,7 @@ String::Random::NiceURL - random ID strings suitable for URLs.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =head1 SYNOPSIS
 
