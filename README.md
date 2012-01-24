@@ -1,4 +1,4 @@
-# String-Random-NiceURL - v0.01 #
+# String-Random-NiceURL #
 
 Random ID strings suitable for URLs.
 
