@@ -1,5 +1,4 @@
-String-Random-NiceURL - v0.01
-=============================
+# String-Random-NiceURL - v0.01 #
 
 Random ID strings suitable for URLs.
 
@@ -11,8 +10,7 @@ characters (this helps some programs detect the URLs correctly).
 Any length IDs (greater than two chars) can be created and could be used for
 blog posts, short URLs, images or videos.
 
-EXAMPLE
-=======
+## EXAMPLE ##
 
     id(2)  => 6p
     id(6)  => NIK_qV
@@ -36,8 +34,7 @@ which is 7.379e+19. (For comparison, this module would produce 6.925e+19
 combinations at 11 chars, so not much less but much nicer due to the
 constrained first and last chars).
 
-INSTALLATION
-============
+# INSTALLATION #
 
 To install this module, run the following commands:
 
@@ -46,8 +43,7 @@ To install this module, run the following commands:
 	make test
 	make install
 
-SUPPORT AND DOCUMENTATION
-=========================
+# SUPPORT AND DOCUMENTATION #
 
 After installing, you can find documentation for this module with the
 perldoc command.
@@ -68,8 +64,7 @@ You can also look for information at:
     Search CPAN
         http://search.cpan.org/dist/String-Random-NiceURL
 
-AUTHOR, COPYRIGHT AND LICENCE
-=============================
+# AUTHOR, COPYRIGHT AND LICENCE #
 
 Written by Andrew Chilton, <andy at chilts dot org>
 
